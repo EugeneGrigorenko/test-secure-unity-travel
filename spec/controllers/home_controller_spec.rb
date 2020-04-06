@@ -7,5 +7,6 @@ RSpec.describe 'Home', type: :request do
     get '/'
     expect(response).to render_template(:index)
     expect(response).to have_http_status(200)
+    expect(response.body).to match /<h4>\W*Sura Design Hotel &amp; Suites/im
   end
 end
