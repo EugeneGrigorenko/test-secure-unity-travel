@@ -1,0 +1,281 @@
+@import "base/colors";
+@import "base/mixins";
+
+
+@media (min-width: 768px) {
+  .payment-button-block-list {
+    padding-top: 5px;
+  }
+}
+
+.payment-method-blocks{
+
+  .heading-title{
+    margin-left: 20px;
+  }
+
+  .payment-block {
+    background-color: $table_row_background;
+    color: $active_text;
+    min-height: 240px;
+    padding: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    @include border-radius(10px);
+    border: 1px solid #ccc;
+
+    a {
+      color: $main_color_2;
+    }
+
+    h4 {
+      text-transform: uppercase;
+      color: #fff;
+      font-size: 1.4em;
+      border-bottom: 1px dashed $border_color;
+    }
+  }
+
+  .circle {
+    cursor: pointer;
+  }
+
+  .payment-all-block {
+    background-color: $success_color;
+    color: $border_color_1;
+
+    .payment-all-info{
+      font-size: 1.7em;
+    }
+
+    span.payment-all-price{
+      color: $active_text;
+      font-weight: bold;
+    }
+  }
+
+  .payment-plan-block {
+    color: $active_link;
+    background-color: $danger_color;
+  }
+
+  .affirm-block {
+    color: $mid_background;
+    background-color: $main_color_1;
+  }
+
+  .col-sm-4 .overlay {
+    text-align: center;
+    font-size: 2em;
+    padding-top: 60px;
+  }
+
+  .col-sm-6 .overlay, .col-sm-12 .overlay {
+    text-align: center;
+    font-size: 2em;
+    padding-top: 80px;
+  }
+
+  .affirm-logo {
+    height: 25px;
+    margin-top: -9px;
+  }
+
+  .affirm-logo-sm {
+    height: 20px;
+    margin-top: -12px;
+  }
+
+
+  @media (max-width: 767px) {
+
+    .heading-title{
+      text-align: center;
+      margin-left: 0;
+    }
+
+    .payment-block {
+      margin-bottom: 5px;
+      min-height: 0;
+
+      h4 {
+        font-size: 1.2em;
+      }
+    }
+
+    .col-sm-6, .col-sm-4, .col-sm-12 {
+      padding-left: 0;
+      padding-right: 0;
+
+      .overlay{
+        font-size: 1.2em;
+        padding: 5px 0;
+      }
+    }
+
+    .affirm-logo, .affirm-logo-sm {
+      height: 17px;
+    }
+
+  }
+}
+
+.payment-button-block {
+
+  .btn {
+    width: 100%;
+
+    .fa-question-circle{
+      margin-right: 5px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    padding: 0 !important;
+
+    .btn {
+      display: block;
+      text-align: left;
+      font-size: 1.1em;
+    }
+  }
+}
+
+.tooltip-wrapper{
+  display: inline-block;
+}
+
+.tooltip-wrapper .btn[disabled] {
+  pointer-events: none;
+}
+
+.tooltip-wrapper.disabled {
+  cursor: not-allowed;
+}
+
+.terms-label {
+  font-size: 1.2em;
+}
+
+#credit-card-form{
+  input[type=text]{
+    height: 40px;
+  }
+}
+
+.echeck_image_box{
+  height: 300px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 300px;
+  position: relative;
+
+  .overlay_image{
+    width: 100%;
+    height: 300px;
+    opacity: 0.2;
+    filter: alpha(opacity=20); /* For IE8 and earlier */
+  }
+
+  .overlay_image_text{
+    font-size: 20px;
+    z-index: 10;
+    position: absolute;
+    padding: 3px 0;
+    line-height: 32px;
+    margin-top: 90px;
+    vertical-align: middle;
+    text-align: center;
+    right: 0;
+    left: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .shopping-cart .panel-heading h4 {
+    font-size: 16px;
+  }
+
+  .echeck_image_box .overlay_image_text {
+    font-size: 10px;
+  }
+}
+
+.select-passport-options {
+  float: right;
+
+  @media (max-width: 767px) {
+    float: none;
+    margin-top:20px;
+    font-size: 1.2em;
+    text-align: center;
+  }
+}
+
+.properties-block {
+  height: 70px;
+
+  .month, .day, .year { width: 30%; }
+}
+
+.cc-number {
+  padding-left: 55px;
+  background: image-url("cards.png") 2px -42px no-repeat, image-url("cards.png") top 13px right -25px no-repeat #fff;
+  background-size: 45px 305px, 45px 350px;
+}
+
+.cc-number.visa {
+  background-position: 2px -81px, top 13px right -25px;
+}
+.cc-number.visa_electron {
+  background-position: 2px -121px, top 13px right -25px;
+}
+.cc-number.mastercard {
+  background-position: 2px -157px, top 13px right -25px;
+}
+.cc-number.maestro {
+  background-position: 2px -195px, top 13px right -25px;
+}
+.cc-number.discover {
+  background-position: 2px -233px, top 13px right -25px;
+}
+.cc-number.amex {
+  background-position: 2px -273px, top 13px right -25px;
+}
+.cc-number.diners_club_carte_blanche {
+  background-position: 2px -42px, top 13px right -25px;
+}
+.cc-number.jcb {
+  background-position: 2px -42px, top 13px right -25px;
+}
+.cc-number.valid.visa {
+  background-position: 2px -81px, top -15px right -25px;
+}
+.cc-number.valid.visa_electron {
+  background-position: 2px -121px, top -15px right -25px;
+}
+.cc-number.valid.mastercard {
+  background-position: 2px -157px, top -15px right -25px;
+}
+.cc-number.valid.maestro {
+  background-position: 2px -195px, top -15px right -25px;
+}
+.cc-number.valid.discover {
+  background-position: 2px -233px, top -15px right -25px;
+}
+.cc-number.valid.amex {
+  background-position: 2px -273px, top -15px right -25px;
+}
+.cc-number.valid.diners_club_carte_blanche {
+  background-position: 2px -42px, top -15px right -25px;
+}
+.cc-number.valid.jcb {
+  background-position: 2px -42px, top -15px right -25px;
+}
+.cc-name, .cc-exp,.cc-cvc {
+  background: image-url("cards.png") #fff no-repeat top 13px right -25px;
+  background-size: 45px 350px;
+}
+.cc-name.valid,.cc-exp.valid, .cc-cvc.valid{
+  background-position: top -15px right -25px;
+}

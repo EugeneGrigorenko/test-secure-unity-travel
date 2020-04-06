@@ -1,0 +1,48 @@
+@import "base/colors";
+
+/* edit vendor page */
+
+.description-field{
+	margin-bottom: 20px;
+}
+
+.highlighted td{
+  background-color:$main_color_2 !important;
+}
+
+.filter-panel{
+
+  .filter-item{
+    display: inline-block;
+    margin-left: 10px;
+
+    &:first-child{margin-left: 0;}
+
+    input[type="text"], input.datepicker, select{margin: 0;}
+    input.datepicker{width: 80px;};
+    select.short-select{width: 110px;}
+    select.long-select{width:240px;}
+    .btn-group{margin-bottom:0;}
+    .checkbox{display: inline-block;
+      margin-left: 0;
+      padding-left: 5px;
+      margin-right: 10px;}
+  }
+  @media(max-width: 767px){
+    .filter-item{
+      text-align: left;
+      display: block;
+      margin-left: 0;
+      label{display: block;}
+      input[type="text"]{width: 250px; margin-bottom: 10px;}
+      select.short-select, select.long-select{width: 270px; margin-bottom: 10px;}
+    }
+  }
+}
+
+#vendor-default-images-list{
+  > span.edit-item-image{
+    margin-right: 7px;
+    margin-bottom: 10px;
+  }
+}

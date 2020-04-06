@@ -1,0 +1,114 @@
+@import "base/colors";
+
+.about-us{
+  color: $text_color_1;
+  background-color: $active_link;
+
+  .big_logo img{
+    margin-top: 100px;
+    margin-bottom: 150px;
+    width: 100%;
+  }
+
+  .img_block{
+    background: image-url('about-us-icons.png') no-repeat;
+    display: inline-block;
+    width: 95px;
+    height: 95px;
+  }
+  .logo{
+    width: 100%;
+  }
+  .about_us_logo_9{background-position: 2px 0;}
+  .about_us_logo_8{background-position: -88px 0;}
+  .about_us_logo_7{background-position: -185px 0;}
+  .about_us_logo_6{background-position: -285px 0;}
+  .about_us_logo_5{background-position: -385px 0;}
+  .about_us_logo_4{background-position: -484px 0;}
+  .about_us_logo_3{background-position: -576px 0;}
+  .about_us_logo_2{background-position: -665px 0;}
+  .about_us_logo_1{background-position: -760px 0;}
+
+  .header_section{
+    font-size: 4.2em;
+    color: $main_color_1;
+    padding-bottom: 50px;
+    padding-top:90px;
+    border-top:1px solid $border_color_2;
+    line-height: 72px;
+  }
+
+  .what_we_do{
+    font-size: 2em;
+    line-height: 45px;
+  }
+
+  .contact{
+    font-size: 1.7em;
+    margin-bottom: 85px;
+  }
+
+  .contain_section{
+    margin-top:20px;
+    margin-bottom: 85px;
+  }
+
+  .block_section{
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    .title_block{
+      vertical-align: bottom;
+      margin-left: 5px;
+      font-size: 1.5em;
+      letter-spacing: -2px;
+      line-height: 38px;
+    }
+    .contain_block{
+      margin-top: 15px;
+      margin-right:6px;
+      font-size: 11px;
+      text-align: justify;
+    }
+  }
+
+  @media(max-width: 767px) {
+    .logo {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .header_section {
+      padding-bottom: 10px;
+      padding-top: 20px;
+      font-size: 25px;
+      letter-spacing: 0;
+      line-height: 25px;
+    }
+
+    .contain_section {
+      margin-top: 10px;
+      margin-bottom: 42px;
+    }
+
+    .what_we_do {
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    .block_section {
+      .title_block {
+        font-size: 25px;
+        letter-spacing: 0;
+        line-height: 30px;
+      }
+      .contain_block {
+        font-size: 10px;
+      }
+    }
+
+    .contact{
+      font-size: 15px;
+    }
+  }
+}

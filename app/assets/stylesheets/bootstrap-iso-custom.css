@@ -1,0 +1,162 @@
+.bootstrap-iso .bg-gray-100 {
+  background-color: #fcfcfc;	
+}
+
+.bootstrap-iso .itext-gray-300 {
+  color: #333333 !important;	
+}
+
+.bootstrap-iso .text-gray-600 {
+  color: #c4c4c4;
+}
+
+.bootstrap-iso .text-gray-650 {
+  color: #979797;
+}
+
+.bootstrap-iso .text-gray-700 {
+  color: #999999;
+}
+
+.bootstrap-iso .text-gold {
+  color: #f1ae4e;
+}
+
+.bootstrap-iso .text-white {
+  color: #ffffff;
+}
+
+.bootstrap-iso .bg-white {
+  background-color: #ffffff;
+}
+
+.bootstrap-iso .bg-blue-300-op-20 {
+  background-color: rgba(45, 101, 148, .2);
+}
+
+.bootstrap-iso .bg-blue-700 {
+  background-color: #1c2749;
+}
+
+.bootstrap-iso .text-blue-500 {
+  color: #428bca;
+}
+
+.bootstrap-iso .text-blue-700 {
+  color: #1c2749;
+}
+
+.bootstrap-iso .text-sm {
+  font-size: .875rem;
+}
+
+.bootstrap-iso .text-lg {
+  font-size: 1.125rem;
+}
+
+.bootstrap-iso .text-xl {
+  font-size: 1.25rem;
+}
+
+.bootstrap-iso .text-2xl {
+  font-size: 1.5rem;
+}
+
+.bootstrap-iso .text-3xl {
+  font-size: 1.875rem;
+}
+
+.bootstrap-iso .text-4xl {
+  font-size: 2.25rem;
+}
+
+.bootstrap-iso .text-5xl {
+  font-size: 3rem;
+}
+
+.bootstrap-iso .border-none {
+  border-style: none;
+}
+
+.bootstrap-iso .border {
+	border-width: 1px;
+}
+
+.bootstrap-iso .border-gray-200 {
+  border-color: #dddddd;
+}
+
+.bootstrap-iso .border-b-d {
+  border-bottom: 1px dashed #ccc;
+}
+
+.bootstrap-iso .h-full {
+  height: 100%;
+}
+
+.bootstrap-iso .h-16 {
+  height: 4rem;
+}
+
+.bootstrap-iso .w-full {
+  height: 100%;
+}
+
+.bootstrap-iso .m-0 {
+  margin: 0;
+}
+
+.bootstrap-iso .mb-1 {
+  margin-bottom: 1rem;
+}
+
+.bootstrap-iso .p-1 {
+  padding: 0.25rem;
+}
+
+.bootstrap-iso .p-8 {
+  padding: 2rem;
+}
+
+.bootstrap-iso .pl-20 {
+  padding-left: 5rem;
+}
+
+.bootstrap-iso .ipl-1 {
+  padding-left: 0.25rem !important;
+}
+
+.bootstrap-iso .pr-20 {
+  padding-right: 5rem;
+}
+
+.bootstrap-iso .py-2 {
+  padding: 0.5rem 0;
+}
+
+.bootstrap-iso .pb-4 {
+  padding-bottom: 1rem;
+}
+
+.bootstrap-iso .py-6 {
+	padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.bootstrap-iso .w-24 {
+  width: 6rem;
+}
+
+.bootstrap-iso .rounded-t {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+.bootstrap-iso .vertical-align {
+    display: flex;
+    align-items: center;
+}
+
+.bootstrap-iso .uppercase {
+  text-transform: uppercase;
+}

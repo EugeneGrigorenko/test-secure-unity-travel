@@ -1,0 +1,34 @@
+@media print {
+
+  @page
+  {
+    size: A4;
+    margin:.5in .5in .3in .5in;
+  }
+
+  .push-body-down { height: 0; }
+
+  .page-footer-print {
+    position: fixed;
+    bottom: 15px;
+    background-color: #fff !important;
+    border-top: 1px solid #ccc;
+    width: 100%;
+    page-break-after:always;
+  }
+
+  .tabprint{ display: block; }
+
+  a:link:after, a:visited:after {
+    display: none;
+    content: "";
+  }
+
+  .order-section h3 .label {
+    border: none;
+  }
+
+  .btn-print, #adminmenumain, .menu-heading { display:none; }
+
+  #wpcontent { margin-left:0 !important; }
+}

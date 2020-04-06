@@ -1,0 +1,48 @@
+@import "base/colors";
+@import "base/mixins";
+
+.report-types-selector, .chart-types-selector, .interval-selector{
+  @include border-radius(4px);
+  -webkit-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+  -moz-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+  box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+  background: #f8f8f8;
+  color: #888;
+  cursor: pointer;
+  width: auto;
+
+  optgroup{
+    border-bottom: 1px dotted $main_color_3;
+  }
+}
+
+@media(max-width: 767px){
+  .report-types-selector, .chart-types-selector, .interval-selector {
+    width:100%;
+    margin-top:4px;
+  }
+}
+
+.geolocation-report-section{
+  display: inline-block;
+  select{
+    margin-bottom: 0;
+  }
+  @media(max-width: 767px){
+    width:100%;
+    margin-bottom:10px;
+  }
+}
+
+#geolocation_map{
+  width: 100%;
+  height: 465px;
+}
+
+#yoy-table tr>td.color-grey {
+  background-color: #f8f8f8;
+}
+
+#yoy-table tr.info>td {
+  background-color: #d9edf7;
+}

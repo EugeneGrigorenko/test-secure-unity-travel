@@ -1,0 +1,22 @@
+#teammate-section {
+  img {
+    border-radius: 50%;
+    width: 90%;
+    height: 90%;
+    margin-left: 5%;
+  }
+
+  .name-section {
+    margin: 10px 0;
+  }
+}
+
+.teammate-img {
+  padding-bottom: 15px;
+  padding-top: 5px;
+  @media(max-width: 460px) {
+    img {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@import "base/colors";
+
+.schedule {
+
+  .filter-title {
+    color: #337ab7;
+  }
+
+  @media(max-width: 767px) {
+    .filter-title {
+      margin-top: 10px;
+      border-top: 1px dashed #000;
+    }
+  }
+}

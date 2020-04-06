@@ -1,0 +1,101 @@
+@import "base/colors";
+@import "base/fonts";
+@import "base/placeholders";
+/*-----------------------------------------------------------------
+ * side bar menu
+ *-----------------------------------------------------------------*/
+
+#sidebar {
+  font-family: $sub_font_1;
+  background-color: #070b16;
+  height: 100%;
+  padding-top: 20px;
+  background: $main_color_1;
+  letter-spacing: 1px;
+  background: -webkit-linear-gradient(25deg, $main_color_1 40%, $active_text);
+  background: -o-linear-gradient(25deg, $main_color_1 40%, $active_text);
+  background: -moz-linear-gradient(25deg, $main_color_1 40%, $active_text);
+  background: linear-gradient(25deg, $main_color_1 40%, $active_text);
+
+  .sidebar-link{
+    display: block;
+    font-size: 1.25em;
+    color: $active_link;
+    margin-top:20px;
+    text-transform: uppercase;
+  }
+
+  .profile-img{
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    display: block;
+  }
+
+  .profile-name{
+    font-size: 1.7em;
+    text-transform: uppercase;
+    color: $main_color_2;
+    margin-top: 20px;
+    font-weight: bold;
+  }
+
+  .profile-link{
+    display: block;
+    font-style: italic;
+    text-decoration: underline;
+    margin-bottom: 30px;
+    font-size: 0.85em;
+    font-weight: bold;
+  }
+
+  .signout-link{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+  }
+}
+
+.row-offcanvas { 
+  margin: 0;
+}
+
+/* collapsed sidebar styles */
+@media screen and (max-width: 767px) {
+  .row-offcanvas {
+    position: relative;
+  }
+
+  .row-offcanvas-right > .sidebar-offcanvas,
+  .row-offcanvas-left > .sidebar-offcanvas {
+    right: -75%;
+  }
+
+  .row-offcanvas-right.active,
+  .row-offcanvas-left.active {
+    right: 75%;
+    position: fixed;
+    width: 100%;
+  }
+
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+    bottom:0;
+    width: 75%;
+    overflow-y: auto;
+    padding-bottom: 20px;
+  }
+
+  .sidebar-blur-offcanvas.active{
+    top: 0;
+    bottom: 0;
+    left: 75%;
+    width: 25%;
+    position: absolute;
+    z-index: 10000;
+    background-color: $trans;
+  }
+}

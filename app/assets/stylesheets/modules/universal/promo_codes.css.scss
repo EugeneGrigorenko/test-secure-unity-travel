@@ -1,0 +1,53 @@
+@import "base/colors";
+
+#div_promo_info{
+  color: $main_color_2;
+  background: rgba(121,189,154,.1);
+  border: 1px solid $main_color_2;
+  padding: 30px;
+  margin-bottom: 40px;
+}
+
+.promo_code_value{
+  color: $main_color_1;
+  font-weight:bold;
+  font-size: 20px;
+  padding: 8px 0;
+}
+
+.promo-section{
+  text-align: left;
+
+	input[type="checkbox"]{
+    margin-top: 0 !important;
+  }
+
+	.promo-section-text{
+		padding-left: 10px;
+    display: inline;
+	}
+}
+
+.promo-code-saved{
+  line-height: 25px !important;
+  font-size: 18px;
+  font-weight: 100;
+  padding: 6px 0;
+}
+
+#remove_code_btn{
+  cursor:pointer;
+  color: #666;
+  display: inline;
+  font-weight: normal;
+  font-size:15px;
+  &:hover{
+    background: transparent;
+    color: $main_color_1;
+    text-decoration: none;
+  }
+}
+
+.promo-code-input{
+  padding: 15px 0 10px 0;
+}

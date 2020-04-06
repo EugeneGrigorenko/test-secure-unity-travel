@@ -1,0 +1,37 @@
+.dashicons:before {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	font-size: 20px;
+	line-height: 1;
+	font-family: "FontAwesome";
+	text-decoration: inherit;
+	-webkit-transition: color .1s ease-in 0;
+	transition: color .1s ease-in 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.ico-affiliate:before{content: "\f126";}
+.ico-event-history:before{content: "\f141";}
+.ico-airline:before{content: "\f072";}
+.ico-checkin:before{content: "\f02c";}
+.ico-contract:before{content: "\f0f6";}
+.ico-echeck:before{content: "\f0d6";}
+.ico-event:before{content: "\f073";}
+.ico-inquiry:before{content: "\f129";}
+.ico-order:before{content: "\f155";}
+.ico-product-review:before{content: "\f123";}
+.ico-promo-code:before{content: "\f06b";}
+.ico-report:before{content: "\f080";}
+.ico-school:before{content: "\f19c";}
+.ico-souvenir-dashboard:before{content: "\f06b";}
+.ico-sms-message:before{content: "\f10b";}
+.ico-device:before{content: "\f10a";}
+.ico-static-page:before{content: "\f16c";}
+.ico-teammate:before{content: "\f0c0";}
+.ico-user:before{content: "\f007";}
+.ico-vendor:before{content: "\f0d1";}
+.ico-system-settings:before{content: "\f013";}
+.ico-control:before{content: "\f140";}
+.ico-addon:before{content: "\f12e";}

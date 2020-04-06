@@ -1,0 +1,59 @@
+@import "base/colors";
+@import "base/placeholders";
+
+.referral-box{
+  text-align: center;
+  background-color: #fff;
+
+  &:hover{
+
+    .referral-link{
+      background: $button_text;
+      a{
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.referral-link{
+  width: 100%;
+  display:inline-block;
+  color: $main_color_2;
+  font-weight:bold;
+  padding: 20px 0;
+  word-wrap: break-word;
+  @extend %transition;
+}
+
+.reps-summary {
+  .header{
+    padding:10px;
+    color: $border_color;
+    background-color: $main_color_1;
+  }
+}
+
+.compensations-number{
+  font-weight: bold;
+  font-size: 4em;
+  border: 4px solid $description_text;
+  text-align: center;
+  padding: 0.5em 0;
+  color: $main_color_1;
+  background-color: $mid_background;
+  border-radius: 10px;
+  text-shadow: 2px -2px $border_color_2;
+}
+
+.compensations-text{
+  font-size: 1.2em;
+  text-align: center;
+  color: $main_color_1;
+}
+
+.compensations-products{
+  font-size:0.7em;
+  color: $highlight_color;
+  li { margin-left:-25px; }
+}

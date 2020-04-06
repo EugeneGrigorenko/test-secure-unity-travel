@@ -1,0 +1,232 @@
+@import "base/colors";
+
+.dashboard-padding{
+  padding:0px 3%;
+
+  .date-title{text-transform: capitalize;}
+
+  .date-label {
+    display: inline-block;
+    width: 70px;
+    text-align: right;
+  }
+
+  .datepicker{
+    width:90px;
+    padding: 6px;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-width: 1px;
+    border-left-width: 1px;
+  }
+
+  button.ui-datepicker-trigger{
+    padding: 5px 8px;
+  }
+
+  .rooming_table{margin-top:1px;}
+
+  .room_night_block{
+    margin-bottom:15px;
+    .room_night_date{
+      min-width:65px;
+      display: block;
+      color: $active_link;
+      background-color: $highlight_color;
+      float: right;
+      padding:12px 7px 13px;
+      text-align: center;
+      -webkit-border-top-left-radius: 10px;
+      -webkit-border-bottom-left-radius: 10px;
+      -moz-border-radius-topleft: 10px;
+      -moz-border-radius-bottomleft: 10px;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+
+    .total_rooms{
+      font-size:13px;
+      color:$main_color_3;
+      display: block;
+      text-align: center;
+    }
+  }
+
+  .no-rooms-row{
+    color:red;
+    height:35px;
+    td{text-align:center;}
+  }
+
+  .btn-success[disabled], .btn-success.disabled{
+    background-color:$link_color;
+  }
+
+  @media(max-width: 767px) {
+    padding:10px 5%;
+
+    .date-selection{
+      text-align:left !important;
+      margin-bottom: 20px;
+      .date-title{display: block;font-weight: bold; font-size: 15px;margin-bottom: 10px;}
+      .date-label{text-align:left;}
+    }
+    .datepicker{width:192px;}
+    .rooming_table{margin-top:0;}
+    .room_night_block .room_night_date{
+      padding:10px 15px 10px;
+      float:left;
+      -webkit-border-top-left-radius: 10px;
+      -webkit-border-top-right-radius: 10px;
+      -moz-border-radius-topleft: 10px;
+      -moz-border-radius-topright: 10px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      -webkit-border-bottom-left-radius: 0;
+      -moz-border-radius-bottomleft: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+}
+
+.right-button{
+  float:right;
+  margin-left:10px;
+}
+
+.tab-content {
+  .flight-dashboard {
+    overflow: auto;
+  }
+}
+
+.flight-dashboard{
+
+  .airline-row{
+    line-height: 30px;
+    margin-top:25px;
+    b{color:$main_color_1; font-size:20px;}
+    .btn{float:right;}
+  }
+
+  .highlighted-flight{
+    background-color: $main_color_2;
+    font-weight: bold;
+  }
+}
+
+.close-well-btn{
+  margin-top: -10px;
+  margin-right: 10px;
+  right: 0;
+  position: absolute !important;
+}
+
+.change-flight-section{
+
+  .flight-section{
+    border-radius: 4px;
+    background: $button_text;
+    padding: 10px;
+    h3{margin: 0;}
+  }
+  .separator-section{
+
+    .separator-box{
+      display: table;
+      font-size: 50px;
+      width: 100%;
+
+      .separator-content-desktop{
+        display: table-cell;
+        vertical-align: middle;
+        height: 200px;
+        text-align: center;
+      }
+
+      .separator-content-phone{
+        vertical-align: middle;
+        height: 30px;
+        text-align: center;
+        padding: 10px;
+        display: none;
+      }
+    }
+  }
+
+  @media(max-width: 767px) {
+    .flight-section{width: 100%; display: block;}
+    .separator-section {
+      .separator-box {
+        .separator-content-desktop {display: none;}
+        .separator-content-phone {display: table-cell;}
+      }
+    }
+  }
+}
+
+.order-dashboard{
+
+  #searchBox{
+    label,select{margin-bottom:0;}
+  }
+
+  .order-dashboard-actions{padding-top: 40px;}
+
+  .input-group{
+    z-index: 0;
+  }
+
+  .advance-search{
+    cursor: pointer;
+    font-size: 13px;
+    text-decoration: underline;
+    display: block;
+  }
+
+  .order-summary{
+    border-bottom: 1px dashed $description_text;
+    line-height: 40px;
+    span{
+      float:right;
+      font-weight: bold;
+    }
+  }
+
+  @media(max-width: 767px) {
+    #searchBox select{width:100%;}
+  }
+}
+
+.bg-color-0{ background-color:$button_text !important; }
+
+.fixed-column {
+  position: absolute;
+  display: inline-block;
+  border-right: 3px solid $description_text !important;
+  background-color: $active_link !important;
+}
+
+#summary_table{
+  border-top:none !important;
+  border-left:none;
+  border-right:none;
+
+  .highlighted-row{ background-color: #ccc; }
+
+  th:first-child{
+    width:100px;
+    min-width: 100px;
+  }
+  
+  th:last-child{ border-right:none; }
+  td:first-child{
+    width: 100px;
+    border-left: 1px solid $main_background;
+  }
+  td:last-child{ border-right: 1px solid $main_background; }
+}

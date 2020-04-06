@@ -1,0 +1,120 @@
+@import "base/colors";
+
+.dashboard-data{
+  font-size:13px;
+  color:$description_text;
+  a{
+    color:$main_color_2;
+    font-size:13px;
+  }
+  span{
+    display:block;
+  }
+}
+
+.dashboard-icon{
+  left:-1.65em !important;
+  color:$highlight_color;
+}
+
+.statistic-col{
+  border-left: 1px solid $button_text;
+  font-size: 0.9em;
+  padding-left: 5px;
+  padding-right: 5px;
+
+  h4{
+    text-transform: uppercase;
+    border-bottom:1px dashed $shadow_color;
+    font-size: 1.3em;
+    color: $active_text;
+  }
+
+  .data{
+    line-height: 35px;
+
+    .value {
+      color: $highlight_color;
+      text-align: right;
+      width: 85px;
+      display: inline-block;
+      padding-right: 5px;
+    }
+
+    a{
+      float: right;
+      margin-top: 7px;
+    }
+
+    .hotel-details{
+      p{font-size:11px;}
+    }
+  }
+
+  .data-sub{
+    .value{
+      width: 85px;
+    }
+  }
+
+  .horizontal-bar-chart{
+    position: relative;
+    margin-bottom: 5px;
+  }
+
+  .bar{
+    background: #e0eacf;
+    height: 30px;
+    display: block;
+    position: absolute;
+    z-index: -2;
+    right: 0;
+  }
+
+  .percentage{
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    padding-right: 2px;
+    font-size:13px;
+    font-weight:bold;
+  }
+
+  .hotel-item{
+    background: $mid_background;
+    padding:4px;
+    color: $active_text;
+  }
+
+  .room-nights-number{
+    float:right;
+    color:$main_color_1;
+  }
+
+  .room-nights-item{
+    cursor: pointer;
+  }
+
+  .sub{
+    margin-left: 5px;
+    .data{
+      line-height: 30px;
+      height:30px;
+      overflow:hidden;
+      font-size:12px;
+    }
+  }
+
+  .border-bottom{
+    border-bottom: 1px dashed #ccc;
+  }
+
+  @media(max-width: 767px) {
+    border-left: 0;
+    padding-left: 0;
+    padding-bottom: 20px;
+  }
+}

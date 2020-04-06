@@ -1,0 +1,334 @@
+@import "base/colors";
+
+.pc_number{
+  position: fixed;
+  font-weight: bold;
+  left: 10px;
+  bottom: 5px;
+
+  .number {
+    font-size: 18em;
+    line-height: 180px;
+    display: block;
+  }
+
+  .location-name{
+    font-size: 1.5em;
+  }
+}
+
+.checkin-dashboard{
+
+  .wide-padding{
+    padding:1em 3% 0;
+    text-align:center;
+    min-height:0;
+  }
+
+  input, select {
+    font-size: 2.2em;
+    height: 60px;
+    margin-bottom: 1em;
+  }
+
+  input[type="checkbox"], input[type="radio"], .checkbox input{
+    width:auto;
+    margin:0;
+    display: inline;
+    height: auto;
+  }
+
+  label {font-size: 2em;}
+
+  #birthday_date_picker{
+    width:255px !important;
+    font-size:1em !important;
+  }
+
+  .step-main-content{
+    .confirm-btn {
+      font-size: 2.5em;
+      color: $main_color_2;
+      min-width: 200px;
+    }
+  }
+
+  .step-message{
+    font-size: 2em;
+    padding: 10px 0 20px;
+    color: $active_text;
+
+    .emphasized-message{
+      font-weight:bold;
+      color:$main_color_1;
+    }
+  }
+
+  .step-btn{
+    font-size: 2.5em;
+    i { color:$main_color_2; }
+  }
+
+  .user-img img {
+    width:100%;
+  }
+
+  .first-screen{
+
+    .logo-content{
+      padding:20% 0;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .start-checkin-btn{
+      font-size: 3em;
+      min-width: 60%;
+      padding: 0.5em;
+      color: $main_color_2 !important;
+    }
+  }
+
+  .second-screen{
+    .search_error{
+      margin:0 auto 10px auto;
+    }
+
+    .text-box-or-msg{
+      font-size:1.8em;
+      font-weight:bold;
+      color:$main_color_1;
+    }
+  }
+
+  .fourth-screen{
+
+    .recent-imgs img{
+      width: 100%;
+      margin-top:10px;
+    }
+
+    h3{
+      margin-top:0;
+
+      .checkin-status{
+        float:right;
+        font-size: 0.5em;
+        font-weight: normal;
+      }
+    }
+
+    .your-shopping-cart-event-header{
+      font-weight:bold;
+      padding:5px;
+      text-align:left;
+      color: $main_color_1;
+    }
+
+    label{
+      display:inline-block;
+      font-weight:bold;
+    }
+
+    .combodate select{
+      height: auto!important;
+      font-size: 1em;
+    }
+  }
+
+  .fifth-screen{
+
+    .phone-number{
+      font-size: 4em;
+      color: $main_color_1;
+    }
+
+    .edit-phone-number-textbox{
+      font-size: 4em;
+      text-align: center;
+      height: 70px;
+    }
+
+    .edit-phone-btn{
+      color: $description_text;
+      font-size: 0.4em;
+      cursor: pointer;
+      display: block;
+      margin-top: 20px;
+    }
+
+    @media(min-width: 768px) and (max-width:991px){
+      h4{ font-size: 2em !important;}
+    }
+  }
+
+  .sixth-screen{
+
+    #main_camera{
+      width:300px;
+      height:400px;
+      padding:2px;
+      margin:auto;
+      border: 5px dotted #737373;
+    }
+
+    .camera-counter{
+      position: fixed;
+      z-index:2000;
+      font-size:5em;
+      font-weight:bold;
+      margin:-250px -25px;
+      color:$active_link;
+    }
+
+    .camera-counter-smile{
+      position: fixed;
+      z-index:2000;
+      font-size:3em;
+      font-weight:bold;
+      margin:-250px -40px;
+      color:$active_link;
+    }
+
+    #original_image{
+      border: 5px dotted #737373;
+    }
+
+    .user-this-picture-btn{
+      font-size:25px;
+      padding-left:25px;
+      margin-left:-25px;
+    }
+
+    .next-btn{
+      color:$main_color_1;
+      font-size: 1.3em;
+    }
+  }
+
+  .seventh-screen{
+    .edit-birthday-btn, .edit-gender-btn{
+      color:$highlight_color;
+      font-size:0.8em;
+      text-decoration: underline;
+    }
+
+    .datetime-combobox{
+      width: 130px;
+    }
+
+    .checkbox{
+      display: inline-block;
+      font-size: 1.5em;
+      padding-bottom: 15px;
+    }
+
+    .next-btn{
+      font-size: 2.5em;
+    }
+
+  }
+
+  .items-table {
+    margin-top: 20px;
+  }
+
+  .back-btn {
+    position: fixed;
+    right: 150px;
+    bottom: 5px;
+  }
+
+  .start-over-btn{
+    position: fixed;
+    right:10px;
+    bottom: 5px;
+  }
+
+  #hidden_div{
+    opacity: 0;
+    z-index: -1;
+    position: absolute;
+    width:320px;
+    height:240px;
+    padding:2px;
+    top: 294px;
+    left: 50%;
+    margin-left: -161px;
+    border: 5px dotted #737373;
+    
+    @media(max-width: 1400px){
+      top: 184px;
+    }
+  }
+
+  /*breadcrumb*/
+  .crumbs { display: block; text-align:center; }
+  .crumbs li {  display: inline-block; }
+  .crumbs li a, .crumbs li a:link, .crumbs li a:visited { color: #666; display: block; float: left; font-size: 15px; margin-left: -15px; padding: 4px 17px 11px 25px; position: relative; text-decoration: none; }
+  .crumbs li a { background: image-url("bg-crumbs.png") no-repeat 100% 0; position: relative; }
+  .crumbs li.active a { background: image-url("bg-crumbs-blue.png") 100% -96px; font-weight:bold; text-transform: uppercase;}
+  .crumbs li a:hover { color: #333; background-position: 100% -48px; cursor: pointer; font-weight:bold;}
+  .crumbs li a:active { color: #333; background-position: 100% -96px;}
+  .crumbs li.first a span { height: 29px; width: 3px; border-left: 1px solid #d9d9d9; position: absolute; top: 0; left: 0; }
+}
+
+.checkin_image_box{
+  vertical-align: middle;
+  .overlay_image{
+    overflow: hidden;
+
+    .overlay_image_text{
+      font-size: 18px;
+      font-weight: 700;
+      z-index: 9999;
+      padding: 15px;
+      margin-top: -70px;
+      opacity: 0.2;
+      filter: alpha(opacity=20); /* For IE8 and earlier */
+      text-align: center;
+    }
+
+    img{
+      filter: alpha(opacity=20); /* For IE8 and earlier */
+      width: 100% !important;
+    }
+
+    .default_img{
+      height: 402px;
+      @media(max-width: 1400px){
+        height: 189px;
+      }
+    }
+  }
+}
+
+#confirmUserInformationModal{
+
+  .modal-body{ padding:20px; }
+
+  .confirm-details{
+    h3{
+      margin-top:0;
+    }
+
+    p{
+      font-size: 1.5em;
+      padding-top: 0.4em;
+    }
+  }
+}
+
+#qrCodeReader{
+  width:300px;
+  height:250px;
+  margin:auto;
+}
+
+
+@media(min-width: 768px) and (max-width: 991px){
+  .user-info{ width: 50%; }
+}
+

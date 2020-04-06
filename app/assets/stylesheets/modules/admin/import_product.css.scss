@@ -1,0 +1,23 @@
+.import-product{
+  border-radius: 4px;
+  background: #fbfbfb !important;
+  border: 1px solid #999 !important;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  padding: 19px;
+  text-align: center;
+
+  .first-screen{
+
+    .btn-upload{
+      width: 280px;
+
+      @media(max-width: 767px){
+        width: 175px;
+      }
+    }
+
+    .import-product-button{
+      margin-top: 15px;
+    }
+  }
+}

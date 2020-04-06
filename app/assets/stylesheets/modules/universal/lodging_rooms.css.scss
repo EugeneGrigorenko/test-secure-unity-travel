@@ -1,0 +1,236 @@
+@import "base/colors";
+
+.room_management_btn{
+  float:right;
+  margin-top: -12px !important;
+}
+
+.rooming-list{
+  .header_pending_member{
+    padding:10px;
+    color: white;
+    background-color: $main_color_3;
+  }
+  .container_pending_users{
+    background-image: url('https://s3.amazonaws.com/juscollege-site/assets/images/debut_light.png');
+  }
+  .member, .pending_member, .declined_member{
+    padding: 10px;
+  }
+  .rooming_line{
+    border-bottom:1px dotted #CCC;
+  }
+  .rooming_list_header{
+    border-bottom: 1px solid #CCC;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1.2em;
+  }
+  .invite_btn_contain{
+    text-align: center;
+    #invite_btn{
+      color:black;
+      margin: 10px 0 10px 10px;
+    }
+  }
+  .import_btn_contain{
+    text-align: center;
+    #import_btn{
+      color:black;
+      margin: 10px 0 10px 10px;
+    }
+  }
+  .splitment_member{
+    color: $main_color_2;
+    .member_name{
+      color: $main_color_2;
+    }
+  }
+  .pending_member{
+    color:#1D9E74;
+    .member_name{
+      color:#1D9E74;
+    }
+  }
+  .declined_member{
+    color:darkgray;
+    .member_name{
+      color:darkgray;
+    }
+  }
+  .footer_form{
+    float:right;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .member{
+    z-index: 1000 !important;
+    cursor: move;
+  }
+
+  .error_message .error{
+    color:red;
+  }
+  .error_message,.guideline{
+    margin-top:5px;
+    float:left;
+    width: 70%;
+  }
+  .guideline{
+    div{
+      margin-bottom: 5px;
+    }
+    .guide-block{
+      margin-bottom: 5px;
+      font-size: 12px;
+      span{
+        font-size:20px;
+        padding-left:16px;
+      }
+      .first-checkin-color{
+        background: $main_color_2;
+      }
+      .free-checkin-color{
+        background:#84A9CF;
+      }
+      .extra-checkin-color{
+        background:#84A9CF;
+      }
+    }
+  }
+  .invitation_member{
+    color:#0A54A0;
+  }
+  .status-message{
+    font-size:12px;
+  }
+  #fillter_member{
+    margin: 10px 5%;
+    width:80% !important;
+  }
+  .hide_btn{
+    display: none !important;
+  }
+  .add_checkin_btn{
+    color:white !important;
+  }
+  .add_checkin_btn,.clear_checkin_member{
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+  }
+  .add_checkin_btn:hover,.clear_checkin_member:hover{
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
+  @media(max-width: 460px){
+    .footer_form{
+      text-align: center;
+      width: 100%;
+    }
+    .add_checkin_btn{
+      font-size:20px !important;
+    }
+    .guideline{
+      width: 100%;
+    }
+  }
+}
+
+/* dashboard admin view */
+
+.room_box,.room_box_header{
+  background-color: $mid_background;
+  border:1px #bbb solid;
+  margin: 0 0 5px 0 !important;
+
+  .room-header{
+    padding: 0 5px;
+    background-color: $main_color_1;
+    font-size:15px;
+    font-weight: bold;
+    color:#fff;
+    min-height: 60px;
+  }
+
+  .room-info{
+    padding: 0 5px;
+    a{
+      color:#0a54a0;
+      font-size: 12px;
+    }
+    span{
+      font-size: 13px;
+    }
+    .right{
+      float:right;
+      font-size: 0.65em;
+      margin-top:5px;
+    }
+  }
+
+  .checkin-block{
+    padding: 0 5px;
+    text-align: center;
+    border-right: 1px dotted #fff;
+    min-height: 60px;
+    a, span{
+      padding: 4px 0 0 0;
+      font-size: 12px;
+      color: #000;
+      display: inline-block;
+      font-weight: bold;
+    }
+    .title{
+      font-weight: bold;
+      font-size: 13px;
+    }
+
+    .clear_checkin_member{
+      position: absolute !important;
+      padding: 0 !important;
+      top: 3px !important;
+      right: 3px !important;
+      font-size: 10px !important;
+      color:white !important;
+      cursor: pointer !important;
+    }
+
+    @media(max-width: 460px){
+      border-right: none;
+      border-bottom: 1px dotted #fff;
+      text-align: left;
+      a, span{
+        font-size: 13px;
+        padding: 15px;
+      }
+      .clear_checkin_member{
+        margin-left: 90% !important;
+        position: relative;
+        margin-top:-29px !important;
+        font-size: 20px !important;
+      }
+    }
+  }
+
+  .first-checkin,.free-checkin{
+    background-color: $main_color_2 !important;
+  }
+
+  .extra-checkin{
+    background-color: #a8c6e6;
+  }
+
+  &:hover{
+    background-color: $main_background;
+    .room-header{ background-color: $highlight_color; }
+    .first_check_in_user{
+      background-color: #76767a;
+      color:#fff;
+    }
+    .second_check_in_user{
+      background-color: #99999b;
+      color:#fff;
+    }
+  }
+}

@@ -1,0 +1,575 @@
+@import "base/colors";
+@import "base/placeholders";
+
+/*----------------------------------------------------------------------
+ * ORDER SHOW PAGE
+ *---------------------------------------------------------------------*/
+
+.order-section {
+  margin-top: 50px;
+
+  h3 {
+    text-transform: uppercase;
+    color: $active_text;
+    font-size: 1.4em;
+    border-bottom: 1px solid $border_color;
+    @media (max-width: 767px) {
+      font-size: 1.25em;
+    }
+
+    .right-buttons {
+      padding-top: 0;
+    }
+
+    .label {
+      font-weight: normal;
+      text-transform: uppercase;
+      box-shadow: 1px -2px 3px $description_text;
+      font-size: 0.7em;
+      float: right;
+      @media (max-width: 767px) {
+        max-width: 100%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        &:hover {
+          text-overflow: clip;
+          white-space: normal;
+          word-break: break-all;
+        }
+      }
+    }
+  }
+
+  h5{
+    color: $active_text;
+    background-color: $border_color;
+    padding: 10px;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  table.no_header{
+    tr:nth-child(even){
+      background-color: $mid_background2;
+    }
+
+    tr:nth-child(odd){
+      background-color: transparent;
+    }
+  }
+
+  .product-table {
+    background-color: $mid_background2;
+  }
+
+  .price {
+    width: 100px;
+  }
+
+  .quantity {
+    width: 50px;
+  }
+}
+
+.order-actions-section .navbar-btn {
+  text-transform: uppercase;
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+}
+
+.table_link tr {
+  cursor: pointer;
+}
+
+#set-cell-width {
+  min-width: 90px;
+}
+
+.unpaid-row {
+  font-style: italic;
+}
+
+.profile-img{
+  width: 25px;
+  height: 25px;
+  margin-right: 3px;
+}
+
+#order-wrapper{
+
+  #dvGuestListInfo{
+    border: 1px dashed $border_color;
+    > div{
+      padding: 8px;
+    }
+  }
+
+  .table-responsive{
+    border: 0;
+    overflow: hidden;
+
+    @media (max-width: 767px) {
+      overflow-x: auto;
+    }
+  }
+
+  .user-profile{
+    margin-bottom: 20px;
+  }
+
+}
+
+/*----------------------------------------------------------------------
+ * ORDER INDEX PAGE
+ *---------------------------------------------------------------------*/
+
+#order-wrapper{
+  padding-top: 15px;
+
+  .installments-table tr{
+    border-top: 1px dotted #CCC !important;
+    border-bottom: 0 !important;
+  }
+}
+
+.no-order-msg {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.order-header {
+  @extend %border-bottom;
+  margin-bottom: 0;
+}
+
+.order-type-title {
+  text-transform: uppercase;
+  float: left;
+  padding-top: 13px;
+  font-weight: bold;
+  color: #000;
+}
+
+.right-buttons, .collapse-buttons{
+  float:right;
+  padding-top: 13px;
+  font-size:12px;
+  color:$main_color_1;
+  cursor: pointer;
+  &:hover {color:$main_color_2;}
+}
+
+.export-section {
+  float: right;
+  padding-bottom: 10px;
+}
+
+.btn_excel {
+  margin-right: 10px;
+}
+
+.btn_notification {
+  margin-right: 10px;
+}
+
+#fillter-excel-form label.error {
+  color: #FB3A3A;
+}
+
+.unavailable {
+  text-decoration: line-through;
+  color: black !important;
+}
+
+.refund-money-normal {
+  color: black !important;
+}
+
+.declined {
+  color: red !important;
+}
+
+.pending {
+  color: $main_color_2 !important;
+}
+
+.refund-money-highlight {
+  color: red !important;
+  font-weight: bold;
+}
+
+.refunded-money {
+  text-decoration: line-through;
+  color: red;
+}
+
+.description {
+  color: $description_text;
+  font-size: 11px;
+}
+
+.available {
+  color: $main_color_2;
+  font-weight: bold;
+}
+
+.on-behalf-order-details-row {
+  background-color: $main_color_3;
+  color: white;
+}
+
+.current_user_payments_table {
+  color: #C09853;
+  border: 1px solid #FBEED5;
+  padding: 8px 35px 8px 14px;
+  margin-top:0;
+  margin-bottom:0;
+  width: 100%;
+  background-color: #FCF8E3;
+
+  tr {
+    border-bottom: 1px dashed $border_color;
+  }
+
+  td, th{
+    padding: 8px;
+    background-color: #FCF8E3;
+  }
+
+  .icon {padding-right: 8px;}
+}
+
+.input_error {
+  color: Red !important;
+  border: 1px solid Red !important;
+}
+
+//order details of moving deposit group
+.group_leader_row {
+  background-color: aliceblue;
+}
+
+.row_highlight {
+  background-color: #EEEEEE !important;
+}
+
+//helper of moving deposit group
+.goal-check {
+  color: $text_color_1;
+  float: right;
+  font-size: 25px;
+  margin-top: -6px;
+}
+
+.goal-toggle {
+  color: $text_color_1;
+  float: left;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.goal-name {
+  color: $text_color_1;
+  float: left;
+  font-size: 14px;
+}
+
+.goal-description {
+  margin: 5px 5px 0;
+  padding: 10px;
+
+  .question{
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+}
+
+.goal-header {
+  cursor: pointer;
+  padding: 5px 5px 0 10px;
+  height: 25px;
+}
+
+.goal {
+  background-color: $mid_background;
+  border-radius: 5px;
+  margin: 10px 0;
+  padding-bottom: 5px;
+}
+.goals{
+  padding:5px;
+}
+
+.stripe_fee{
+  color: $description_text;
+  .money{
+    color: $highlight_color;
+  }
+}
+
+.profit_details_link, .buyer_details_link, .deposited_into_bank_details_link{
+  color:$main_color_1;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.details-link{
+  float:right;
+  text-transform: lowercase;
+  color: #3355ba;
+  cursor: pointer;
+  font-size: 0.7em;
+}
+
+.modal-view-image{
+
+  .modal-body{
+    padding: 0;
+    max-height: 100%;
+    width: 100%;
+
+    .image_viewer{
+      overflow: auto;
+      height: 100%;
+      img{ width: 100%; }
+    }
+  }
+  .processing-buttons{
+    background-color: $main_color_1;
+    text-align: center;
+    width:100%;
+
+    a{
+      display: inline-block;
+      padding: 10px 30px;
+      font-size: 1.8em;
+      font-weight: 300;
+      color: white;
+    }
+
+    @media(max-width: 767px){
+      position: fixed;
+      bottom:0;
+
+      a {
+        padding: 10px;
+        font-size: 1.5em;
+      }
+    }
+  }
+}
+
+.check_image{
+  width: 100%;
+  border: 2px dashed #ccc;
+  cursor: pointer;
+  background-color: $main_background;
+}
+
+.removed-line {
+  text-decoration: line-through;
+  color: $highlight_color;
+}
+
+.edit-check-link {
+  color: $main_color_3;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.echeck-update-form{
+  width:270px;
+  margin:auto;
+  text-align:left;
+  .fee-item-line{
+    span{
+      float:right;
+      font-weight:bold;
+      color:$main_color_1;
+    }
+  }
+  .upper-div{
+    margin-top:10px;
+    border-bottom:1px dotted $button_text;
+    padding-bottom:3px;
+    margin-bottom:3px;
+  }
+
+  @media(max-width: 767px){
+    width:90% !important;
+  }
+}
+
+.profit-details-table {
+  border: 0;
+  width: 99%;
+  tr { border-top: 1px dotted #CCC; border-bottom: 0; }
+  tr:hover { background-color: $main_background; }
+  th { border-bottom: 0; }
+  td { padding: 4px 15px; }
+}
+
+.vendor_instruction p{
+  padding: 0 !important;
+}
+
+.help-section {
+  padding: 25px;
+  background: $button_text;
+  margin-bottom: 20px;
+  @extend %gray-border-all;
+}
+
+.assign-checkin-user {
+  padding: 10px;
+
+  .invite-user-error{
+    color: $highlight_color;
+  }
+
+  table {
+    th{
+      white-space: nowrap;
+    }
+
+    .user-profile-img{
+      float: none;
+    }
+
+    .quantity{
+      width: 40px;
+    }
+
+    .select-checkin-user{
+      width: 150px;
+    }
+
+    .invite-user{
+      width: 200px;
+    }
+
+    @media (max-width: 991px) {
+      .select-checkin-user{
+        width: 200px;
+      }
+
+      .invite-user{
+        margin-top: 5px;
+      }
+    }
+  }
+}
+
+.transfer-order{
+  .transfer-user, .transfer-fee{
+    width: 255px;
+  }
+}
+
+// Arrow Pass
+
+.redeem-select-date{
+  .redeem-select-date-item{
+    span{
+      cursor: default;
+      float: left;
+      overflow: hidden;
+      padding: 2px 5px;
+      white-space: nowrap;
+      position: relative;
+      margin: 2px;
+      border: 1px solid #156090;
+      background: #186ba0;
+      color: #FFFFFF;
+      border-radius: 3px;
+    }
+  }
+}
+
+.edit-order{
+  .product-categories{
+    background-color: $border_color;
+    text-align: center;
+
+    label {
+      font-weight: bold;
+    }
+
+    input[type="text"] {
+      width: 250px;
+      margin: 10px;
+    }
+  }
+
+  .product-wrap {
+    cursor: pointer;
+    background: url(https://s3.amazonaws.com/juscollege-site/assets/images/debut_light.png);
+    border: 3px solid #fff;
+    margin: 5px;
+    overflow: hidden;
+    padding-bottom: 6px;
+    -webkit-box-shadow: 1px 1px 1px 0 #858d90;
+    -moz-box-shadow: 1px 1px 1px 0 #858d90;
+    box-shadow: 1px 1px 1px 0 #858d90;
+
+    img {
+      width: 100%;
+      height: 150px;
+    }
+
+    .price {
+      position: absolute;
+      background-color: #df3e04;
+      font-weight: bold;
+      color: white;
+      font-size: 15px;
+      padding: 5px 10px;
+      margin-top: 5px;
+      margin-left: -3px;
+      width: auto;
+      -webkit-border-top-right-radius: 15px;
+      -webkit-border-bottom-right-radius: 15px;
+      -moz-border-radius-topright: 15px;
+      -moz-border-radius-bottomright: 15px;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+      -webkit-box-shadow: 1px 1px 1px 0 #858d90;
+      -moz-box-shadow: 1px 1px 1px 0 #858d90;
+    }
+
+    .product-name {
+      font-size: 12px;
+      padding-top: 5px;
+      text-align: center;
+      height: 20px;
+      overflow: hidden;
+    }
+
+    .shopping-cart-qty-box {
+      width: 40px;
+      height: 27px;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  .custom-product{
+    input, select{
+      margin-bottom: 20px;
+    }
+
+    .total-price {
+      font-size: 1.5em;
+      color: black;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #1b274c;
+      font-size: 1.2em;
+      width: 100%;
+    }
+  }
+}

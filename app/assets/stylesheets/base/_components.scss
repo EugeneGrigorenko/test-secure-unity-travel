@@ -1,0 +1,594 @@
+@import "colors";
+@import "base/mixins";
+@import "fonts";
+
+/*-------------------------------------------------------------------
+ * links
+ *------------------------------------------------------------------*/
+a {
+  color: $link_color;
+  &:hover, &:focus {
+    color: $main_color_2;
+    text-decoration: none;
+  }
+}
+
+/*-------------------------------------------------------------------
+ * input, textarea, select box
+ *------------------------------------------------------------------*/
+input, textarea, select, .multiselect {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #ccc;
+  @include border-radius(3px);
+}
+
+.multiselect {
+  text-align: left;
+  background: #fff;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  transition: border linear 0.2s, box-shadow linear 0.2s;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.multiselect b.caret {
+  position: absolute;
+  right: 5px;
+  top: 45%;
+}
+
+.multiselect-container{
+  max-height: 300px !important;
+  overflow: auto;
+  li > a > label{ padding-left: 10px; }
+
+  li.disabled > a > label {
+      color: $highlight_color;
+    }
+
+  @media(max-width: 767px) {
+    width: 100%;
+  }
+}
+
+select{
+  height: 35px;
+
+  option[disabled] {
+    color: $highlight_color;
+  }
+}
+
+.input_mini{ width: 80px; }
+
+/*-------------------------------------------------------------------
+ * label
+ *------------------------------------------------------------------*/
+label{
+  font-weight: normal;
+  color: $active_text;
+}
+
+/*-------------------------------------------------------------------
+ * radio
+ *------------------------------------------------------------------*/
+input[type="radio"], input[type="checkbox"], input[type="button"]{
+  width: auto;
+  margin: 0 5px 0 0;
+}
+
+.radio, .checkbox {
+  margin-left: 20px;
+}
+
+.radio {
+  > input[type="radio"]{
+    margin-top: 6px;
+  }
+}
+
+/*-------------------------------------------------------------------
+ * pre, div, ...
+ *------------------------------------------------------------------*/
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 15px;
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+/*-------------------------------------------------------------------
+ * alert - flash message
+ *------------------------------------------------------------------*/
+.alert-error {
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442;
+}
+
+/*-------------------------------------------------------------------
+ * ul, li, dl, ...
+ *------------------------------------------------------------------*/
+dl { display: inline-block; }
+
+ul.unstyle-list {
+  margin: 0;
+  list-style: none;
+}
+
+/*-------------------------------------------------------------------
+ * buttons; override bootstrap button styles
+ *------------------------------------------------------------------*/
+input[type="button"], input[type="submit"]{
+  width: auto;
+}
+
+.btn-responsive {
+  white-space: normal;
+
+  @media (max-width: 414px) {
+    margin-bottom: 5px;
+    margin-left: 0 !important;
+    display: block;
+    width: 100%;
+  }
+}
+
+.btn-flat{
+  @include border-radius(0);
+}
+
+.btn-primary,.btn-primary:active, .btn-primary.active, .btn-primary:focus{
+  background-color: $highlight_color;
+  border-color: $highlight_color;
+
+  &:hover, .active{
+    background: $highlight_color;
+    border-color: $highlight_color;
+  }
+}
+
+.btn-primary[disabled],
+.btn-primary[disabled]:hover,
+.btn-primary[disabled]:focus,
+.btn-primary[disabled].active{
+  background: $highlight_color;
+  border-color: $highlight_color;
+}
+
+.btn-info, .btn-info:active, .btn-info.active, .btn-info:focus{
+  background: $info_color;
+  border-color: $info_color;
+
+  &:hover{
+    background-color: $info_color;
+    border-color: $info_color;
+  }
+}
+
+.btn-danger, .btn-danger:active, .btn-danger.active, .btn-danger:focus{
+  background: $danger_color;
+  border-color: $danger_color;
+
+  &:hover{
+    background-color: $danger_color;
+    border-color: $danger_color;
+  }
+}
+
+.btn-book, .btn-book:active, .btn-book.active, .btn-book:focus, .btn-book:hover{
+  background: $book_color;
+  border-color: $book_color;
+  color: $active_link;
+}
+
+.btn-light {
+  background: $active_link;
+  color: $active_text;
+}
+
+.btn-outline-primary {
+  border: 1px solid $highlight_color;
+  color: $highlight_color;
+}
+
+.btn-xs {
+  padding: 5px 5px 3px 5px;
+  font-size: 0.85em;
+}
+
+/*-------------------------------------------------------------------
+ * breadcrumbs
+ *------------------------------------------------------------------*/
+
+.breadcrumb{
+  a{
+    color: $main_color_1;
+    &:hover{
+      color: $main_color_1;
+    }
+  }
+  .active{
+    a{
+      color: $description_text;
+      pointer-events: none;
+      cursor: default;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+/*-------------------------------------------------------------------
+ * pagination, page size
+ *------------------------------------------------------------------*/
+.pagination {
+  margin: 0;
+  > li > a,
+  > li > span{ padding: 4px 12px; }
+}
+
+.page-size-title {
+  float: left;
+  vertical-align: middle;
+  line-height: 30px;
+  margin-right: 3px;
+  font-size:1em;
+}
+
+.page-size-combobox {
+  float: left;
+  width: 60px;
+  height: 30px;
+  padding: 2px 4px;
+  margin-right: 5px;
+  margin-bottom: 20px;
+}
+
+.pagination-right{
+  margin-right: 10%;
+  margin-top: 35px;
+}
+
+/*-------------------------------------------------------------------
+ * table
+ *------------------------------------------------------------------*/
+.table{
+  background-color: #fff;
+
+  caption {
+    background: $main_color_3;
+    color: $border_color;
+    padding: 10px;
+  }
+}
+
+.table-striped > tbody > tr:nth-of-type(odd){
+  background-color: #f0f0f0;
+}
+
+.tablesorter-default{
+  font: 1em $main_font;
+  color: inherit;
+}
+
+.table-responsive table{
+  margin-bottom: 0;
+}
+
+/*-------------------------------------------------------------------
+ * text decoration
+ *------------------------------------------------------------------*/
+
+.underline { text-decoration: underline; }
+
+.uppercase { text-transform: uppercase; }
+
+/*-------------------------------------------------------------------
+ * modal
+ *------------------------------------------------------------------*/
+.modal-title{
+  font-weight: bold;
+}
+
+/* overwrite modal small of bootstrap */
+@media (min-width: 768px) {
+  .modal-sm {
+    width: 352px;
+  }
+}
+
+/*-------------------------------------------------------------------
+ * break line, hr, ...
+ *------------------------------------------------------------------*/
+hr { margin: 0; }
+
+/* borders */
+
+.grey-border{
+  border-bottom: 1px solid $border_color;
+}
+
+.grey-border-top{
+  border-top: 1px solid $border_color;
+}
+
+.left-right-border{
+  border-left: 1px solid #4c4d51;
+  border-right: 1px solid #4c4d51;
+}
+
+/*-------------------------------------------------------------------
+ * navbar menu
+ *------------------------------------------------------------------*/
+.navbar {
+  .text-input {
+    height: 35px;
+  }
+}
+
+/*-------------------------------------------------------------------
+ *  general controls
+ *------------------------------------------------------------------*/
+
+.bubble-circle {
+  position:absolute;
+  top: -6px;
+  width: 20px;
+  line-height: 20px;
+  background-color: $highlight_color;
+  color: #fff;
+  font-weight:bold;
+  margin-left:18px;
+  box-shadow:1px 1px 1px gray;
+  text-align: center;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.error-msg{
+  color: $highlight_color;
+  padding: 5px;
+  border: 1px dashed #000;
+  margin-bottom: 10px;
+  background-color: #f2dede;
+}
+
+.error-message {
+  color: $highlight_color;
+}
+
+.heading-title{
+  font-size: 1.3em;
+  font-weight: bold;
+  color: $main_color_3;
+
+  @media (max-width: 767px) {
+    font-size: 1.2em;
+  }
+}
+
+.ribbon {
+  background-color: $main_color_1;
+  overflow: hidden;
+  white-space: nowrap;
+  position: absolute;
+  right: -40px;
+  top: 8px;
+  @include rotate-transform(30deg);
+  @include box-shadow(0px, 0px, 1px, 2px, $main_color_1);
+  color: $active_link;
+  font-weight: bold;
+  padding: 5px 60px;
+
+  @media (max-width: 767px) {
+    font-size: 0.8em;
+    right: -25px;
+    top: 0;
+    padding: 5px 30px;
+  }
+}
+
+.title-bar{
+  width:100%;
+  background-color: $main_color_3;
+  height: 50px;
+  position: fixed;
+  z-index: 1049;
+  text-align:center;
+  color: $active_link;
+  padding: 15px;
+
+  .highlight{
+    color: $highlight_color;
+    font-weight: bold;
+  }
+
+  .btn-power-off{
+    margin-top: -7px;
+  }
+
+  @media (max-width: 767px) {
+    height: 60px;
+    padding: 12px;
+
+    .highlight-responsive::before{
+      content: '';
+      display: block;
+    }
+
+    .btn-power-off {
+      margin-top: -30px;
+      margin-right: -10px;
+    }
+  }
+}
+
+.push-title-bar {
+  height: 50px;
+
+  @media (max-width: 767px) {
+    height: 60px;
+  }
+}
+
+.filters label{
+  margin-left: 15px;
+}
+
+/* css for date & date time controls */
+.datetime-combobox{
+  width: 90px;
+}
+
+.controls > .date:first-child, .controls > .datetime:first-child{
+  width: 86px !important;
+  height:30px !important;
+}
+
+.controls > .date:nth-child(2), .controls > .datetime:nth-child(2){
+  width: 106px !important;
+  height:30px !important;
+}
+
+.controls > .date:nth-child(3), .controls > .datetime:nth-child(3){
+  width: 70px !important;
+  height:30px !important;
+}
+
+.controls > select.time, .controls > .datetime:nth-child(4), .controls > .datetime:nth-child(5){
+  width: 70px !important;
+  height:30px !important;
+}
+
+.btn-group, .btn-group .multiselect {
+  width: 100% !important;
+}
+
+.date.form-control{
+  display: inline-block;
+  width: 32.1%;
+}
+
+.datetime.form-control{
+  display: inline-block;
+  width: 18%;
+}
+
+.date.control-label, .time.optional.control-label, .datetime.control-label{
+  width: 100%;
+}
+
+.time.optional.form-control{
+  display: inline-block;
+  width: 45%;
+}
+
+.g-recaptcha {
+  margin: 0 auto;
+  width: 280px;
+}
+
+/*-------------------------------------------------------------------
+ * scroll to top icon
+ *------------------------------------------------------------------*/
+
+#back-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 17px;
+  z-index: 1000;
+  color:$description_text;
+  cursor: pointer;
+  text-decoration: none;
+  transition: opacity 0.2s ease-out;
+  opacity: 0;
+
+  &:hover { color:$main_color_2; }
+  &.show { opacity: 1; }
+
+  @media (max-width: 767px) {
+    display: none !important;
+  }
+}
+
+/* jquery ui slider */
+.slider{ width: 100% !important; }
+
+/*-------------------------------------------------------------------
+ * utilities spacing class
+ *------------------------------------------------------------------*/
+.padding-top { padding-top: 15px; }
+.padding-row { padding-left: 15px; padding-right: 15px; }
+.padding-col {padding-top: 15px; padding-bottom: 15px;}
+.padding-all { padding: 4rem }
+.no-padding { padding: 0; }
+.no-padding-left { padding-left: 0; }
+.no-padding-right { padding-right: 0; }
+.no-padding-top { padding-top: 0; }
+.no-padding-bottom { padding-bottom: 0; }
+.no-margin { margin: 0; }
+.no-margin-left { margin-left: 0; }
+.no-margin-right { margin-right: 0; }
+.no-margin-bottom { margin-bottom: 0; }
+.no-margin-top { margin-top: 0; }
+.margin-top-10 { margin-top: 1.0em; }
+.margin-top-15 { margin-top: 1.5em; }
+.margin-top-20 { margin-top: 2.0em; }
+.margin-top-25 { margin-top: 2.5em; }
+.margin-top-30 { margin-top: 3.0em; }
+.margin-bottom-05 { margin-bottom: 0.5em; }
+.margin-bottom-10 { margin-bottom: 1.0em; }
+.margin-bottom-15 { margin-bottom: 1.5em; }
+.margin-bottom-20 { margin-bottom: 2.0em; }
+.margin-bottom-25 { margin-bottom: 2.5em; }
+.margin-bottom-30 { margin-bottom: 3.0em; }
+
+.no-overflow { overflow: hidden; }
+
+.row-flex {
+  display: inline-table;
+  width: 100%;
+}
+
+.inline-block
+{
+  display: inline-block;
+}
+
+.img-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+
+  img {
+    width: 100%;
+  }
+}
+
+.limit_wrap {
+  background: $active_link;
+  min-height: 150px;
+  max-height: 300px;
+  overflow: auto;
+}
+
+.progress-bar-tooltip{
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  span{
+    white-space: nowrap;
+  }
+}
+
+.progress-bar-tooltip-html{
+  white-space: nowrap;
+}

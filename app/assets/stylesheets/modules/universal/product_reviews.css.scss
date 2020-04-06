@@ -1,0 +1,45 @@
+@import "base/colors";
+@import "base/placeholders";
+
+.review-header{
+  padding-bottom: 10px;
+  @extend %border-bottom;
+}
+
+.review-type-title{
+  text-transform: uppercase;
+  color:$active_text;
+}
+
+.product-rating-pannel{
+  position: absolute;
+  display:block;
+  z-index:200;
+  top:50px;
+  left:50px;
+}
+
+span .rating-value-product-list{
+  img{
+    border:none;
+    width:auto;
+  }
+}
+
+.admin-product-review-table{
+  width: 90%;
+}
+
+.admin-product-review-table .left-column{
+  font-weight: bold;
+  padding:5px 0 5px 50px;
+  vertical-align: top;
+  width: 50px;
+}
+
+.admin-product-review-table .right-column{
+  padding:5px 10px;
+}
+
+
+

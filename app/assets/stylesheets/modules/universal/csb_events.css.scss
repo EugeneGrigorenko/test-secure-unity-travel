@@ -1,0 +1,374 @@
+@import "base/colors";
+
+.csb-event-dashboard{
+
+  .step-number{
+    float: left;
+    margin-top: 10px;
+  }
+
+  .step-name{
+    margin-top: 10px;
+    margin-left: 10px;
+    float: left;
+    color:$main_color_1;
+    font-weight:bold;
+    font-size:20px;
+    @media(max-width: 767px) {font-size:15px;}
+  }
+
+  .product-type-header{
+    text-align: center;
+    margin-top: -10px;
+    min-height: 31px;
+    a{
+      float: right;
+      margin-top:-5px;
+      margin-right:20px;
+    }
+
+    @media(max-width: 767px) {
+      .btn-back-responsive{
+        position: absolute;
+        right: 0;
+        margin-right:0;
+        margin-top:-30px;
+      }
+    }
+  }
+
+  .main-dashboard{
+    min-height:250px;
+  }
+
+  .skip-flight-link{
+    margin:20px 0 0;
+    a{
+      color:$highlight_color;
+      &:hover{
+        font-weight:bold;
+        text-shadow: 1px 2px $button_text;
+        i{
+          text-shadow: 3px 0 $main_color_2;
+        }
+      }
+    }
+  }
+
+  .body-checkout{
+    margin: 20px 0;
+  }
+
+  .csb-step-1{
+    .input-group{
+      width: 100%;
+
+      input {
+        font-size: 1.2em;
+        height: 48px;
+      }
+    }
+
+    .dropdown-toggle {
+      font-size: 1.2em;
+      height: 48px;
+      background: #eee;
+      padding:12px;
+    }
+
+    .multiselect-item {
+      .input-group{
+        width:auto;
+        input { font-size:1em; height:auto;}
+      }
+    }
+
+    .btn-group .active {
+      display: block !important;
+    }
+
+    .warning-normal{
+      text-align: center;
+    }
+  }
+
+  .csb-step-3{
+    .show-all{
+      padding: 0 5px;
+
+      label{
+        font-weight: bold;
+        font-size: 1.2em;
+        margin: 0;
+
+        input[type=checkbox]{
+          margin-top: 4px;
+        }
+      }
+    }
+  }
+}
+
+.flight-detail-column{
+  margin-left:10px;
+  margin-bottom:15px;
+}
+
+.slash-modal{
+  .modal-body{margin:40px; padding: 0 !important;}
+  .section{
+    margin-bottom: 25px;
+    .btn-lg{min-width:250px;}
+  }
+  .section:last-child {margin-bottom:0;}
+  .section div{
+    font-size:18px;
+    margin-top:10px;
+    text-align: left;
+  }
+
+  @media(max-width: 767px) {
+    .modal-body{margin:20px 10px;}
+    .section .btn-lg{
+      min-width:150px;
+      line-height:30px;
+    }
+
+    .small-xs {
+      padding-left: 0;
+      padding-right: 0;
+      font-size: 1.1em;
+      text-align: center;
+    }
+
+    .section div{font-size:15px;}
+  }
+}
+
+.csb_room_parent_view{
+  .remaining-time {
+    color: $active_text;
+    font-style: italic;
+    font-size: 1.2em;
+  }
+
+  .ms_timer{color:red;}
+  .roommate-needed{
+    color:red;
+    text-transform: uppercase;
+  }
+}
+
+.csb_room_modal{
+
+  .modal-body{
+    padding:20px 30px 0 30px;
+  }
+
+  .product_img { width: 100%; }
+
+  label{
+    margin-top:15px;
+    .request_content{
+      margin-left:25px;
+      display: block;
+      margin-top: -20px;
+    }
+  }
+
+  .member-name{
+    width: 200px;
+  }
+
+  .step_title{
+    color: $main_color_2;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .check_true{
+    font-weight: bold;
+    color:$main_color_1;
+  }
+
+  .room_types_list{padding-left:45px;}
+
+  .search_title{margin-bottom:10px;}
+
+  .input-group { width:80%; }
+
+  .tbn_search{margin-bottom:10px;}
+
+  .member_available_icon{color:$main_color_2;}
+
+  .member_not_available_icon{color:$button_text;}
+
+  .remove_member_btn{
+    font-size:20px;
+    cursor:pointer;
+    &:hover{
+      text-shadow: 1px 2px $link_color;
+      color:$main_color_2;
+    }
+  }
+
+  .member_name_confirm{
+    border: 1px dashed $main_color_2;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    padding:8px;
+    width:255px;
+    display: inline-block;
+  }
+
+  .confirm_msg{padding-bottom:12px;}
+
+  .timer{
+    font-size: 25px;
+    font-weight: bold;
+    color: red;
+    float: right;
+    text-align: center;
+    border: 1px dashed $description_text;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    display: block;
+    padding:0 10px;
+  }
+
+  .separate_line{
+    border: 1px dashed #CCC;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+
+  .check_in_date{
+    color:$main_color_3;
+    margin-top: 10px;
+    line-height:25px;
+  }
+
+  .highlighted_timer{
+    font-weight: bold;
+    color: red;
+    text-decoration: underline;
+    display: inline-block;
+  }
+
+  .additional-fee-input{
+    width: 100px !important;
+  }
+
+  @media(max-width: 767px) {
+    .modal-body{ padding: 15px; }
+    .room_types_list{padding-left: 15px; margin-top: 20px;}
+    .search-div{text-align:center;}
+    .input-group { width:100%; }
+    .member_name_confirm {width:225px;}
+    .timer{margin:auto;float:none;}
+    .remove_member_btn{
+      position: absolute;
+      right:25px;
+      margin-top:-32px;
+    }
+  }
+}
+
+#csb_search_modal .modal-body{padding:15px !important;}
+
+.room_resign_div{
+  padding-left:30px;
+  .resign_description{
+    font-size:14px;
+    line-height:22px !important;
+  }
+  .resign_button{width:150px;}
+
+  @media(max-width: 767px) {
+    padding:10px;
+    .resign_button{margin-top:30px;}
+  }
+}
+
+.room_member_table tr{height:40px;}
+
+.trip-date-info {
+  padding: 10px;
+  float: right;
+  text-align: left;
+
+  .date, .school {
+    font-size: 1.2em;
+    color: $highlight_color;
+  }
+
+  @media(max-width: 767px) {
+    float: none;
+    display: inline-block;
+
+    .date {
+      font-size: 1.1em;
+    }
+  }
+}
+
+.trip-date-info-school{
+  padding: 3px 10px 0;
+}
+
+.ng-inline-edit--validating:after {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("ajax-loader.gif");
+}
+
+.ng-inline-edit--validating .ng-inline-edit__input {
+  background: #fff;
+  opacity: 1;
+}
+
+.ng-inline-edit--error .ng-inline-edit__input {
+  color: #f00;
+}
+
+.ng-inline-edit__button {
+  font-size: 0;
+  margin-left: 5px;
+  visibility: visible;
+  opacity: 1;
+}
+
+.ng-inline-edit__button:hover {
+  opacity: 1;
+}
+
+.ng-inline-edit:hover .ng-inline-edit__button,
+.ng-inline-edit .ng-inline-edit__button--save,
+.ng-inline-edit .ng-inline-edit__button--cancel {
+  visibility: visible;
+}
+
+.ng-inline-edit__button:after {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.ng-inline-edit__button--edit:after {
+  content: "\270E";
+  color: #00f;
+}
+
+.ng-inline-edit__button--save:after {
+  content: "\2714";
+  color: #0f0;
+}
+
+.ng-inline-edit__button--cancel:after {
+  content: "\2716";
+  color: #f00;
+}

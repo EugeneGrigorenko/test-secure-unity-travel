@@ -1,0 +1,28 @@
+$main_font: "helveticaneue-ultralight";
+$sub_font_1: "helveticaneue-ultralight";
+$sub_font_2: "matrixscriptregularregular";
+
+@font-face {
+  font-family: 'helveticaneue-ultralight';
+  src: asset-url('helveticaneue.eot?#iefix') format('embedded-opentype'),
+  asset-url('helveticaneue.woff') format('woff'),
+  asset-url('helveticaneue.ttf') format('truetype'),
+  asset-url('helveticaneue.svg') format('svg');
+}
+
+@font-face {
+  font-family: 'matrixscriptregularregular';
+  src: asset-url('matrixscriptregular.eot?#iefix') format('embedded-opentype'),
+       asset-url('matrixscriptregular.woff') format('woff'),
+       asset-url('matrixscriptregular.ttf') format('truetype'),
+       asset-url('matrixscriptregular.svg') format('svg');
+}
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: asset-url('glyphicons-halflings-regular.eot');
+  src: asset-url('glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
+       asset-url('glyphicons-halflings-regular.woff') format('woff'),
+       asset-url('glyphicons-halflings-regular.ttf') format('truetype'),
+       asset-url('glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}

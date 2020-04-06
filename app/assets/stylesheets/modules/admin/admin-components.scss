@@ -1,0 +1,305 @@
+@import "base/colors";
+@import "base/placeholders";
+
+.menu-heading {
+  background-color: $mid_background;
+  color: $active_text;
+  padding: 10px 20px;
+
+  a {
+    color: $highlight_color;
+  }
+}
+
+/* teaching section */
+
+.how-to-use{
+  padding: 25px;
+  background: $mid_background;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  @extend %gray-border-all;
+
+  .page-explanation{
+
+    h1, h2{ margin: 0; }
+
+    h1{
+      line-height: 30px;
+      text-transform: uppercase;
+      font-size: 20px;
+      font-weight: bold;
+      padding-bottom: 5px;
+    }
+
+    h2{
+      line-height: 20px;
+      font-size: 17px;
+      font-weight: 100;
+    }
+  }
+
+  .explanation-section{
+    a{
+      background: $highlight_color;
+      color: white;
+      margin-bottom: 0;
+      padding: 10px 25px;
+    }
+  }
+}
+
+
+/* school schedule */
+.semester_color{ color: lightcoral; }
+.break_color{ color: lightgreen; }
+
+
+/* user profile image */
+
+td .profile-img{
+  width:25px;
+  height:25px;
+  float:left;
+  margin-right:3px;
+}
+
+.edit-event-form, .edit-vendor-form {
+
+  .user-group{ margin-bottom:20px; }
+
+  .group-content{
+    padding:20px;
+    border:2px dashed #CCC;
+    border-top: none;
+    background-color: #fff;
+    @media(max-width: 767px) {
+      padding:10px;
+    }
+  }
+
+  .panel-body {
+    border-style: solid !important;
+    border-width: 1px !important;
+    border-top-color: #CCC;
+  }
+
+  .discount_section .inline, .souvenir_discount_section .inline{ float:right; margin-right:10px; }
+
+  .event_full_payment_discount_amount,
+  .event_full_payment_discount_percent,
+  .event_souvenir_discount_amount,
+  .event_souvenir_discount_percent{
+    margin-top: -35px;
+
+    @media(max-width: 767px) {
+      margin-top: 0;
+    }
+  }
+
+  .event_allow_full_payment_discount, .event_allow_souvenir_discount{
+    width: 200px;
+  }
+
+  .collection_radio_buttons{ margin-left: 3px; }
+
+  .affirm-logo {
+    height: 13px;
+    margin-top: -5px;
+  }
+
+  .arrow-pass-logo {
+    height: 26px;
+    margin-top: -5px;
+  }
+}
+
+.edit-vendor-form {
+  .daily-weekly-label {
+    margin-top: 8px;
+  }
+}
+
+.on-behalf-search-form{
+  .input-group{
+    margin: auto;
+    width: 400px;
+
+    @media(max-width: 767px) {
+      width: 100%;
+    }
+  }
+}
+
+#create_user_onbehalf{
+  color: $highlight_color;
+}
+
+/* dashboard group --> group header */
+
+.dashboard_group > form > select {
+  width: 106px;
+}
+
+.dashboard_group {
+  margin-bottom:20px;
+  margin-top: 25px;
+
+  .checkbox {
+    margin-left: 40px;
+    display: inline-block;
+
+    input[type="checkbox"] {
+      margin-top: 2px;
+    }
+  }
+}
+
+.product_list tbody tr:hover,
+.inbound_flight_list tbody tr:hover,
+.outbound_flight_list tbody tr:hover{
+  cursor:move;
+}
+
+.navbar-collapse{
+  padding: 0;
+
+  .filters{
+    margin: 8px 0;
+    text-align: center;
+
+    label {
+      margin-top: 8px;
+    }
+
+    .btn-sm {
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: 8px;
+    }
+  }
+
+  .multiselect{
+    padding: 6px 10px;
+  }
+
+  @media(max-width: 767px) {
+    .navbar-form{
+      margin: -1px auto;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+.dashboard_group .search_group{float:left;display:inline-block;}
+.dashboard_group .filter_group{float:right;display:inline-block;}
+
+
+/* csb conversion report */
+
+.csb-report-tab-page {
+  border-bottom: 2px dashed $main_color_1;
+  padding-bottom: 5px;
+
+  .btn {
+    float: none;
+    margin-left: -5px !important;
+  }
+}
+
+/* edit product page - property tab */
+.property-list{
+  input{ padding: 6px; }
+  li{ margin: 3px 0; }
+}
+
+.modal-body .inline {
+  margin-right: 20px;
+  text-transform: uppercase;
+  label { margin-left: 5px; }
+}
+
+
+.form-group .checkbox {
+  input[type="checkbox"], input[type="radio"]{
+    margin-top: 2px;
+  }
+}
+
+/*-------------------------------------------------------------------
+ * edit item image
+ *------------------------------------------------------------------*/
+
+.edit-item-image img, img.edit-item-image {
+  width: 300px;
+  height: 200px;
+}
+
+.redeem-item-collapse-button{
+  cursor: pointer;
+  color: $main_color_2;
+}
+
+/*-------------------------------------------------------------------
+ * edit item image
+ *------------------------------------------------------------------*/
+
+#days_of_week_group{
+  span{
+    display: inline-block;
+    label{
+      width: 100px;
+    }
+  }
+}
+
+.pay-balance-due{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+
+  .payment-form-wrap{
+    label{
+      text-align: left;
+
+      input{
+        width: 300px;
+        height: 40px;
+      }
+    }
+  }
+}
+
+/*-------------------------------------------------------------------
+ * spec to real flight setting
+ *------------------------------------------------------------------*/
+
+.flight-tier-table{
+  padding-left: 50px;
+
+  .flight-tier-row{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 0;
+    border-top: dotted 1px;
+
+    &:first-child{
+      border-top: none;
+      padding-top: 0;
+    }
+
+    &:last-child{
+      padding-bottom: 0;
+    }
+
+    .flight-tier-col{
+      padding: 5px 0;
+
+      &.flight-tier-col-action{
+        text-align: right;
+        padding: 0;
+      }
+    }
+  }
+}

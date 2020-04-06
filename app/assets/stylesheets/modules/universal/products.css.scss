@@ -1,0 +1,577 @@
+@import "base/colors";
+@import "base/placeholders";
+@import "base/mixins";
+
+/* event product list page */
+
+.product-3-box{
+  float: none;
+  display: inline-block;
+  vertical-align: top;
+  width: 33.1%;
+  padding: 15px 15px 0;
+
+  .product-name{
+    height: 44px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-right: 5px;
+
+    &:hover {
+      text-overflow: clip;
+      white-space: normal;
+      word-break: break-all;
+    }
+  }
+
+  .hotel-address {
+    font-size: 0.8em;
+    font-style: italic;
+    color: $description_text;
+  }
+
+  .thumbnail {
+    padding: 2%;
+    position: relative;
+    overflow: hidden;
+
+    .ribbon {
+      top: 10px;
+      right: -60px
+    }
+
+    .img-wrapper {
+      width: 104%;
+      margin: -2% -2% 2% -2%;
+      overflow: hidden;
+      position: relative;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  @media(max-width: 767px){
+    padding: 0;
+    width: 49.4%;
+
+    .thumbnail{
+      border-color: #fff;
+
+      .ribbon {
+        top: 8px;
+        right: -30px;
+        @include rotate-transform(35deg);
+        font-size: 0.7em;
+      }
+    }
+
+    .product-price {
+      font-size: 1.1em;
+    }
+
+    .product-retail {
+      float: left;
+    }
+
+    .product-name{
+      font-size: 0.9em;
+    }
+
+    .book-now-phone-btn {
+      display: inline-block;
+      float:left;
+      margin-top: -35px;
+    }
+  }
+}
+
+.product-3-box-detail{
+  clear: both;
+  display: inline-block;
+  background: $main_background_2;
+  padding: 40px;
+  margin-bottom: 10px;
+  position: relative;
+  border-radius: 0;
+  border: 0;
+  width:100%;
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    width: 0;
+    height: 0;
+    border-bottom: 20px solid $main_background_2;
+    border-top: 20px solid transparent;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+  }
+}
+
+.product-3-box-detail, .product-row-detail {
+  .product-price {
+    color: $button_text;
+  }
+}
+
+.product-3-box-detail-left{
+  &:after {
+    left: 15%;
+  }
+}
+
+.product-3-box-detail-right{
+  &:after {
+    left: 82%;
+  }
+}
+
+.product-3-box-detail-center{
+  &:after {
+    left: 49%;
+  }
+}
+
+.product-name{
+  margin: 5px 0;
+  font-size: 1.2em;
+  color: $main_color_1;
+}
+
+.product-price{
+  color: $active_text;
+  font-weight: bold;
+  font-size: 1.3em;
+  text-align: right;
+}
+
+.product-retail{
+  color: $highlight_color;
+  font-size: 1.1em;
+  float: right;
+
+  h5 {
+    margin-bottom: 0;
+  }
+}
+
+.room-price-details {
+  font-size: 0.9em;
+  margin-top: 10px;
+
+  .show-hide-btn{
+    font-size: 1em;
+    margin-bottom: 10px;
+    cursor: pointer;
+
+    &:hover {
+      color: $main_color_2;
+    }
+  }
+}
+
+.product-row-detail {
+  clear: both;
+  display: inline-block;
+  background: $main_background_2;
+  padding: 40px;
+  margin: 20px 0;
+  width:100%;
+  position: relative;
+  border-radius: 0;
+  border: 0;
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    width: 0;
+    height: 0;
+    left: 48%;
+    border-bottom: 20px solid $main_background_2;
+    border-top: 20px solid transparent;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+  }
+}
+
+span.product-file-wrapper {
+  display: inline-block;
+  position: relative;
+}
+
+span.product-file-wrapper > input[type=checkbox] {
+  position: absolute;
+  margin: 0;
+  top: 5px;
+  right: 5px;
+}
+
+span.product-file-wrapper > .delete-button {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+/* Flight List */
+
+.flight-list {
+  .flight-terms {
+    color: $active_link;
+  }
+
+  .flight {
+    &:nth-of-type(odd) {
+      background: $table_row_background;
+    }
+  }
+
+  .flight-cell {
+    display: table-cell;
+    height: 85px;
+    padding: 10px;
+    vertical-align: middle;
+  }
+
+  .airline-logo {
+    width: 16%;
+
+    img {
+      width: 150px;
+    }
+  }
+
+  .flight-description {
+    width: 100%;
+  }
+
+  .flight-price {
+    font-weight: normal;
+    font-size: 1em;
+    width: 10%;
+    text-align: center;
+  }
+
+  .flight-details-link {
+    text-decoration: underline;
+    margin-top: 5px;
+    display: block;
+    text-align: center;
+  }
+
+  .fa-ellipsis-h {
+    line-height: 1em;
+  }
+
+  @media (max-width: 767px) {
+    .flight {
+      display: inline-block;
+      width: 100%;
+      margin-bottom: 5px;
+      background: $table_row_background;
+      position: relative;
+
+      &:nth-of-type(odd) {
+        background: $table_row_background;
+      }
+    }
+
+    .flight-cell {
+      display: inline-block;
+      position: relative;
+      height: auto;
+    }
+
+    .airline-logo {
+      width: 70%;
+      float: left;
+      img {
+        width: auto;
+        height:30px;
+      }
+    }
+
+    .flight-description {
+      width: 70%;
+      float: left;
+      padding-top: 0;
+    }
+
+    .flight-price, .flight-actions {
+      width: 30%;
+      text-align: right;
+      margin: 0;
+      padding-left: 0;
+    }
+
+    .flight-price {
+      float: right;
+      padding-top: 0;
+    }
+
+    .flight-actions {
+      position: absolute;
+      right: 0;
+
+      .btn {
+        font-size: 0.8em;
+      }
+    }
+
+    .flight-details-link {
+      text-align: right;
+    }
+  }
+}
+
+.flight-row {
+  margin-bottom: 5px;
+}
+
+/* new product form */
+
+#product_product_type{
+	margin-bottom: 20px;
+}
+
+.variant-list{
+  padding: 5px 0 15px 0;
+}
+
+.img-wrap{
+  margin-bottom: 20px;
+}
+
+
+/* product detail container */
+
+.flexslider{
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+}
+
+.product-description{
+
+  h4 {
+    color: $active_link;
+  }
+
+  p:first-child{
+    margin-top: 0;
+  }
+
+  p{
+    line-height: 25px !important;
+    font-size: 14px !important;
+    font-weight: 200;
+    margin: 20px 0;
+  }
+
+  @media(max-width: 767px){
+    padding: 0 10px 20px 10px;
+  }
+}
+
+span.product-description {
+  color: $active_link;
+  padding: 0;
+}
+
+.modal{
+  .product-description {
+    h4{
+      color: $active_text;
+    }
+  }
+
+  span.product-description {
+    color: $active_text;
+  }
+}
+
+.properties-table{
+  background-color: transparent;
+  font-size: 0.8em;
+
+  .value{
+    text-align: right;
+    color: $highlight_color;
+  }
+}
+
+.place-order-form-title-phone{
+  @extend %gray-border-all;
+
+  @media(max-width: 767px){
+    font-weight:900;
+    text-align:left;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+  }
+}
+
+.address-section{
+  @extend %gray-border-all;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.product-address, .product-city{
+  font-size: 15px;
+  font-weight: bold;
+  color: $link_color;
+  text-transform: uppercase;
+}
+
+.add-to-cart-section{
+  padding-left: 20px;
+
+  .close-button{
+    display: none !important;
+  }
+
+  .modal-footer{
+    background: white;
+    border: 0;
+    position: relative;
+  }
+
+  .total-price{
+    padding-bottom: 0 !important;
+  }
+
+  .price{
+    padding-bottom: 40px;
+  }
+
+  @media(max-width: 767px){
+    margin: 50px 0 !important;
+    padding-left: 0;
+  }
+}
+
+/* product edit */
+
+span.product-rating-pannel{
+  margin-top:30px;
+}
+select#variant_list{
+  padding: 10px 6px !important;
+}
+.product-history-table td{
+  vertical-align: top;
+}
+
+.rotate-45{transform: rotate(45deg)}
+
+.room-type-group{
+  .review-header{
+    border-bottom: 1px dashed #ccc;
+
+    .room-type-name{
+      color: $main_color_1;
+      line-height: 30px;
+      font-weight: bold;
+    }
+
+    .room-tpe-info {
+      font-weight: normal;
+      color: $description_text;
+      display: inline-block;
+      font-size: 90%;
+      b{ color: $main_color_1; }
+    }
+
+    a.btn, span.btn{float:right; margin-left:5px;}
+  }
+
+  td.date-from-to{font-size:13px;}
+}
+
+.well{
+  @media(max-width: 460px) {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+  }
+}
+
+.toggle-link{
+  font-size:12px;
+  color:$main_color_1;
+  cursor: pointer;
+  &:hover {color:$main_color_2;}
+}
+
+.normal-event-dashboard{
+  padding-bottom: 30px;
+
+  .tab-content{
+    background-color: #fafafa;
+    padding-top: 15px;
+  }
+
+  .tab-panel{
+    position: relative;
+  }
+
+  @media(max-width: 767px) {
+    .menu-tabs{
+      line-height: 28px;
+    }
+
+    .tab-content{
+      padding: 0;
+      margin-top: 10px;
+    }
+  }
+}
+
+.csb-event-dashboard, .normal-event-dashboard{
+  .product-price{
+    float:right;
+  }
+
+  .modal-footer{
+    border: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.csb-event-dashboard .product-3-box{
+  padding: 5px 5px 0;
+}
+
+@media(max-width: 767px) {
+  .modal-footer .product-price{
+    float: right;
+  }
+}
+
+/* event overview on products page */
+
+.event-product-overview{
+  text-align: left;
+
+  .overview{
+    color: hsl(0, 0%, 0%);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px dashed #cccccc;
+
+    a {
+      color: hsl(208, 56%, 46%);
+    }
+  }
+}
+
+.page-title {
+  .choose-addon-description {
+    color: $description_text;
+  }
+}
