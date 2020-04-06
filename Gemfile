@@ -24,6 +24,7 @@ gem 'sassc-rails'
 
 gem 'bootstrap-multiselect-rails'
 gem 'bootstrap-sass'
+
 gem 'bootstrap-will_paginate'
 gem 'flex-slider-rails'
 
@@ -39,6 +40,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'rails-controller-testing'
   gem 'rspec-rails'
   gem 'rubocop'
   gem 'rubocop-performance', require: false
